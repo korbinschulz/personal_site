@@ -41,11 +41,18 @@
   font-weight: 300;
 }
 
+.main_interest {
+  font-family: serif;
+  font-style: italic;
+  margin-left: 5px;
+}
+
 .main_li {
   list-style-type: circle;
   margin-left: 25px;
   text-decoration: underline;
   text-underline-offset: 3px;
+  font-family: serif;
 }
 
 @media screen and (max-width: 790px) {

@@ -19,10 +19,18 @@ export default function Home() {
       </div>
 
       <div className={styles.main_body}>
-        I am interested in software engineering (mainly web & mobile), deep
-        learning, design (UI & UX), and cybersecurity. I desire to create
-        unique, impactful products using my knowledge from these fields. I am
-        also interested in music, fashion, sports, and movies!
+        I am interested in{" "}
+        <span className={styles.main_interest}>software engineering</span>{" "}
+        (mainly web & mobile),{" "}
+        <span className={styles.main_interest}>deep learning</span>,{" "}
+        <span className={styles.main_interest}>design</span> (UI & UX), and{" "}
+        <span className={styles.main_interest}>cybersecurity</span>. I desire to
+        create unique, impactful products using my knowledge from these fields.
+        I am also interested in
+        <span className={styles.main_interest}>music</span>,{" "}
+        <span className={styles.main_interest}> fashion</span>,{" "}
+        <span className={styles.main_interest}>sports</span>, and
+        <span className={styles.main_interest}>movies</span>!
       </div>
 
       <div className={styles.main_body}>

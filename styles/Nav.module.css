@@ -30,8 +30,17 @@
   color: white;
 }
 
+.nav_link_active {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: rgb(255, 201, 211);
+}
+
 .nav_link_icon {
-  color: white;
+  color: inherit;
   font-size: 1.5rem;
   stroke-width: 5px;
 }
