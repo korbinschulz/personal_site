@@ -10,9 +10,11 @@
 .nav_inner {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 940px;
   width: 100%;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
   gap: 25px;
 }
 
@@ -46,7 +48,11 @@
 }
 
 .nav_link:hover {
-  scale: 1.05;
+  scale: 1.04;
+}
+
+.nav_link_active:hover {
+  filter: saturate(170%);
 }
 
 @media screen and (max-width: 880px) {
