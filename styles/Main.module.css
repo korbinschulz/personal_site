@@ -1,0 +1,56 @@
+.outer {
+  border: 2px solid blue;
+  margin-top: 40px;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  gap: 40px;
+  line-height: 1.5;
+}
+
+.main_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  gap: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.75rem;
+  font-family: serif;
+}
+
+.main_subhead {
+  font-size: 1.25rem;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.main_body {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 900px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.main_li {
+  list-style-type: circle;
+  margin-left: 25px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 790px) {
+  .outer {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+}

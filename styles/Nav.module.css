@@ -1,0 +1,55 @@
+.nav_outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.nav_inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  gap: 25px;
+}
+
+.nav_link {
+  display: flex;
+  gap: 25px;
+}
+
+.nav_link_text {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+.nav_link_icon {
+  color: white;
+  font-size: 1.5rem;
+  stroke-width: 5px;
+}
+
+.nav_link:hover {
+  scale: 1.05;
+}
+
+@media screen and (max-width: 880px) {
+  .hide {
+    display: none;
+  }
+
+  .nav_link_icon {
+    font-size: 1.75rem;
+  }
+
+  .nav_link:hover {
+    scale: 1.1;
+  }
+}
