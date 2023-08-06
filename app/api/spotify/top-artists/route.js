@@ -1,6 +1,4 @@
 import axios from "axios";
-const clientId = process.env.SPOTIFY_CLIENTID;
-const secret = process.env.SPOTIFY_SECRET;
 
 export const GET = async (req, res) => {
   const getToken = async () => {
@@ -23,10 +21,10 @@ export const GET = async (req, res) => {
     return response.data;
   };
 
-  const getNowPlaying = async () => {
+  const getTopArtists = async () => {
     const { access_token } = await getToken();
     const response = await axios.get(
-      "https://api.spotify.com/v1/me/player/currently-playing",
+      "https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10&offset=0",
       {
         headers: {
           Authorization: `Bearer ${access_token}`,
@@ -38,30 +36,15 @@ export const GET = async (req, res) => {
   };
 
   try {
-    const response = await getNowPlaying();
+    const response = await getTopArtists();
 
-    if (response.status == 204 || response.status >= 400) {
-      //return res.status(200).json({ isPlaying: false });
-      return new Response(JSON.stringify({ isPlaying: false }), {
-        status: 200,
-      });
-    }
+    const data = response.items.map((artist) => ({
+      name: artist.name,
+      image: artist.images[0].url,
+      url: artist.external_urls.spotify,
+    }));
 
-    const data = {
-      isPlaying: response.is_playing,
-      title: response.item.name,
-      album: response.item.album.name,
-      artist: response.item.album.artists
-        .map((artist) => artist.name)
-        .join(", "),
-      albumImage: response.item.album.images[0].url,
-      songUrl: response.item.external_urls.spotify,
-    };
-
-    //console.log(response);
-    return new Response(JSON.stringify(data), {
-      status: 200,
-    });
+    return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
     console.error("Error fetching data from Spotify API:", error);
     //res.status(500).json({ error: "Internal Server Error" });
