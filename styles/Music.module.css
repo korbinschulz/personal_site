@@ -1,0 +1,25 @@
+.music_outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 2rem;
+  border: 2px solid red;
+}
+
+.music_inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 940px;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  gap: 25px;
+}
+
+.music_section {
+  display: flex;
+  flex-direction: column;
+}
