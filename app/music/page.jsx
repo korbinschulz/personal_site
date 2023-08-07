@@ -1,5 +1,6 @@
 //"use client";
 import style from "../../styles/Music.module.css";
+import MusicCard from "@/components/MusicCard";
 
 async function getArtists() {
   try {
@@ -57,11 +58,48 @@ const Music = async () => {
         </section>
 
         <section className={style.music_section}>
+          {currentListening.title != null ? (
+            <>
+              <span className={style.music_subheader}>
+                I'm currently listening to...
+              </span>
+              <MusicCard
+                name={currentListening.title}
+                img={currentListening.albumImage}
+                artist={currentListening.artist}
+                link={currentListening.songUrl}
+              />
+            </>
+          ) : (
+            <></>
+          )}
+        </section>
+
+        <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Artists</span>
+          <div className={style.music_content_container}>
+            {artists.map((artist) => (
+              <MusicCard
+                img={artist.image}
+                link={artist.url}
+                artist={artist.name}
+              />
+            ))}
+          </div>
         </section>
 
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Songs</span>
+          <div className={style.music_content_container}>
+            {songs.map((song) => (
+              <MusicCard
+                img={song.img}
+                link={song.link}
+                name={song.name}
+                artist={song.artist}
+              />
+            ))}
+          </div>
         </section>
       </div>
     </div>
