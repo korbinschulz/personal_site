@@ -4,7 +4,6 @@
   align-items: center;
   width: 100%;
   padding-left: 2rem;
-  border: 2px solid red;
 }
 
 .music_inner {
@@ -22,4 +21,14 @@
 .music_section {
   display: flex;
   flex-direction: column;
+  overflow-wrap: normal;
+}
+
+.music_content_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  max-width: 940px;
+  gap: 15px;
 }

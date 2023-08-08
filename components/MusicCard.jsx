@@ -9,8 +9,8 @@ const MusicCard = ({ name, artist, album, img, link }) => {
         <Image
           alt={alt}
           className={style.music_image}
-          width={30}
-          height={30}
+          width={100}
+          height={100}
           src={img}
         />
       </a>

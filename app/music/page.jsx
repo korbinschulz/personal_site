@@ -39,9 +39,9 @@ const Music = async () => {
 
   useEffect(() => {*/
 
-  const artists = await getArtists();
-  const songs = await getSongs();
-  const currentListening = await getCurrentListening();
+  let artists = await getArtists();
+  let songs = await getSongs();
+  let currentListening = await getCurrentListening();
   // }, []);
 
   console.log("ARTISTS HERE ", artists);
@@ -57,23 +57,25 @@ const Music = async () => {
           </span>
         </section>
 
-        <section className={style.music_section}>
-          {currentListening.title != null ? (
-            <>
-              <span className={style.music_subheader}>
-                I'm currently listening to...
-              </span>
-              <MusicCard
-                name={currentListening.title}
-                img={currentListening.albumImage}
-                artist={currentListening.artist}
-                link={currentListening.songUrl}
-              />
-            </>
-          ) : (
-            <></>
-          )}
-        </section>
+        {/*
+          <section className={style.music_section}>
+            {currentListening.title != null ? (
+              <>
+                <span className={style.music_subheader}>
+                  I'm currently listening to...
+                </span>
+                <MusicCard
+                  name={currentListening.title}
+                  img={currentListening.albumImage}
+                  artist={currentListening.artist}
+                  link={currentListening.songUrl}
+                />
+              </>
+            ) : (
+              <></>
+            )}
+          </section>
+            */}
 
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Artists</span>

@@ -1,9 +1,12 @@
 .card_outer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  width: 425px;
+  height: 8rem;
+  gap: 15px;
+  padding-left: 20px;
+  border: 1px solid gray;
 }
 
 .song_label {
@@ -12,4 +15,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.music_image {
+  height: 5rem;
+  width: 5rem;
+  object-fit: contain;
+  overflow: hidden;
 }
