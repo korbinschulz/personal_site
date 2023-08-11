@@ -1,43 +1,46 @@
-//"use client";
 import style from "../../styles/Music.module.css";
 import MusicCard from "@/components/MusicCard";
-
 export const metadata = {
   title: "Music - Korbin S",
   description: "Korbin Schulz's website's music page",
 };
 
-async function getArtists() {
-  try {
-    const response = await fetch("http:localhost:3000/api/spotify/top-artists");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data", error);
-  }
-}
-
-async function getSongs() {
-  try {
-    const response = await fetch("http:localhost:3000/api/spotify/top-tracks");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data", error);
-  }
-}
-
-async function getCurrentListening() {
-  try {
-    const response = await fetch("http:localhost:3000/api/spotify/now-playing");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data", error);
-  }
-}
-
 const Music = async () => {
+  async function getArtists() {
+    try {
+      const response = await fetch(
+        "http:localhost:3000/api/spotify/top-artists"
+      );
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  }
+
+  async function getSongs() {
+    try {
+      const response = await fetch(
+        "http:localhost:3000/api/spotify/top-tracks"
+      );
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  }
+
+  async function getCurrentListening() {
+    try {
+      const response = await fetch(
+        "http:localhost:3000/api/spotify/now-playing"
+      );
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  }
   /*const [songs, setSongs] = useState();
   const [artists, setArtists] = useState();
   const [currentListening, setCurrentListening] = useState();
@@ -62,25 +65,23 @@ const Music = async () => {
           </span>
         </section>
 
-        {/*
-          <section className={style.music_section}>
-            {currentListening.title != null ? (
-              <>
-                <span className={style.music_subheader}>
-                  I'm currently listening to...
-                </span>
-                <MusicCard
-                  name={currentListening.title}
-                  img={currentListening.albumImage}
-                  artist={currentListening.artist}
-                  link={currentListening.songUrl}
-                />
-              </>
-            ) : (
-              <></>
-            )}
-          </section>
-            */}
+        <section className={style.music_section}>
+          {currentListening.title != null ? (
+            <>
+              <span className={style.music_subheader}>
+                I'm currently listening to...
+              </span>
+              <MusicCard
+                name={currentListening.title}
+                img={currentListening.albumImage}
+                artist={currentListening.artist}
+                link={currentListening.songUrl}
+              />
+            </>
+          ) : (
+            <></>
+          )}
+        </section>
 
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Artists</span>
