@@ -41,10 +41,10 @@ const Nav = () => {
             <span className={style.hide}>Experience</span>
           </span>
         </Link>
-        <Link className={style.nav_link} href="/interests">
+        <Link className={style.nav_link} href="/projects">
           <span
             className={
-              pathname == "/interests"
+              pathname == "/projects"
                 ? style.nav_link_active
                 : style.nav_link_text
             }
@@ -52,7 +52,7 @@ const Nav = () => {
             <IconContext.Provider value={{ className: style.nav_link_icon }}>
               <PiStarLight />
             </IconContext.Provider>
-            <span className={style.hide}>Interests</span>
+            <span className={style.hide}>Projects</span>
           </span>
         </Link>
         <Link className={style.nav_link} href="/music">

@@ -10,9 +10,9 @@ const Experience = () => {
     <div className={style.experience_outer}>
       <div className={style.experience_inner}>
         <section className={style.experience_main_section}>
-          <span className={style.main_header}> Work Experience</span>
+          <span className={style.main_header}>Work Experience</span>
           <span className={style.main_sub}>
-            You can also learn about my projects & download my resume{" "}
+            You can also learn download my resume{" "}
             <a
               href="/KorbinSchulz_Resume.pdf"
               target="_blank"
