@@ -2,6 +2,11 @@
 import style from "../../styles/Music.module.css";
 import MusicCard from "@/components/MusicCard";
 
+export const metadata = {
+  title: "Music - Korbin S",
+  description: "Korbin Schulz's website's music page",
+};
+
 async function getArtists() {
   try {
     const response = await fetch("http:localhost:3000/api/spotify/top-artists");

@@ -1,6 +1,11 @@
 import Image from "next/image";
 import styles from "../styles/Main.module.css";
 
+export const metadata = {
+  title: "Home - Korbin S",
+  description: "Korbin Schulz's website's home page",
+};
+
 export default function Home() {
   return (
     <main className={styles.outer}>
@@ -28,7 +33,6 @@ export default function Home() {
         create unique, impactful products using my knowledge from these fields.
         I am also interested in
         <span className={styles.main_interest}>music</span>,{" "}
-        <span className={styles.main_interest}> fashion</span>,{" "}
         <span className={styles.main_interest}>sports</span>, and
         <span className={styles.main_interest}>movies</span>!
       </div>

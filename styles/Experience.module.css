@@ -29,7 +29,7 @@
 .main_header {
   font-style: italic;
   font-family: serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 3%;
 }
 
@@ -44,14 +44,11 @@
   text-underline-offset: 2px;
 }
 
-.resume_link:hover {
-  cursor: pointer;
-}
-
 .experience_subsection {
   display: flex;
   flex-direction: column;
   overflow-wrap: normal;
+  max-width: 900px;
 }
 
 .sub_header {
@@ -61,4 +58,17 @@
 .supporting_label {
   margin-top: 5px;
   color: rgb(181, 181, 181);
+  font-size: 1.2rem;
+}
+
+.experience_list {
+  margin-top: 10px;
+  padding-left: 1rem;
+  list-style-type: circle;
+  font-size: 1.1rem;
+}
+
+.experience_list_element {
+  margin-top: 5px;
+  line-height: 1.3;
 }

@@ -1,5 +1,10 @@
 import style from "../../styles/Experience.module.css";
 
+export const metadata = {
+  title: "Experience - Korbin S",
+  description: "Korbin Schulz's experience page",
+};
+
 const Experience = () => {
   return (
     <div className={style.experience_outer}>
@@ -7,7 +12,7 @@ const Experience = () => {
         <section className={style.experience_main_section}>
           <span className={style.main_header}> Work Experience</span>
           <span className={style.main_sub}>
-            You can also download my resume{" "}
+            You can also learn about my projects & download my resume{" "}
             <a
               href="/KorbinSchulz_Resume.pdf"
               target="_blank"
@@ -25,6 +30,19 @@ const Experience = () => {
           <span className={style.supporting_label}>
             Frontend Developer | Jun 2023 - Present
           </span>
+          <ul className={style.experience_list}>
+            <li className={style.experience_list_element}>
+              Working with a team of developers to create a web interface for
+              Lumina, which is a ticketing platform monitoring service designed
+              to help ticket "scalpers" acquire the best tickets to maximize
+              their profits
+            </li>
+            <li className={style.experience_list_element}>
+              Developed and designed a comprehensive web interface using
+              Next.JS, React, Figma, and CSS to create a responsive and visually
+              appealing user experience
+            </li>
+          </ul>
         </section>
         <section className={style.experience_subsection}>
           <span className={style.sub_header}>Textron</span>
@@ -70,47 +88,6 @@ const Experience = () => {
               providing a secure and reliable platform for customers
             </li>
           </ul>
-        </section>
-
-        <section className={style.experience_main_section}>
-          <span className={style.main_header}>Projects</span>
-          <span className={style.main_sub}>
-            Check out some of the projects that i've been working on.
-          </span>
-        </section>
-
-        <section className={style.experience_subsection}>
-          <span className={style.sub_header}>Food Finder</span>
-          <span className={style.supporting_label}>
-            Typescript, React, Node.js, CSS, MySQL
-          </span>
-          <ul className={style.experience_list}>
-            <li className={style.experience_list_element}>
-              Developed a dynamic web application designed to help users
-              discover exciting new dining options in their area
-            </li>
-            <li className={style.experience_list_element}>
-              Utilized Yelp's API to present restuarants to users based on their
-              preferences and location, delivering a unique and personalized
-              experience
-            </li>
-            <li className={style.experience_list_element}>
-              Designed a robust backend using Node.js and MySQL to store user
-              restaurants, preferences, and account data
-            </li>
-          </ul>
-        </section>
-        <section className={style.experience_subsection}>
-          <span className={style.sub_header}>WriteRight</span>
-          <span className={style.supporting_label}>
-            Javascript, React, Node.js, CSS, MongoDB
-          </span>
-        </section>
-        <section className={style.experience_subsection}>
-          <span className={style.sub_header}>Fude</span>
-          <span className={style.supporting_label}>
-            Javascript, React, Node.js, CSS, MongoDB
-          </span>
         </section>
       </div>
     </div>
