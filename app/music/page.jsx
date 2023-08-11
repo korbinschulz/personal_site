@@ -3,7 +3,7 @@ import MusicCard from "@/components/MusicCard";
 import NowPlaying from "@/components/NowPlaying";
 export const metadata = {
   title: "Music - Korbin S",
-  description: "Korbin Schulz's website's music page",
+  description: "Korbin S music page",
 };
 
 const Music = async () => {

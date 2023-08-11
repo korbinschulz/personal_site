@@ -3,7 +3,7 @@ import style from "@/styles/Projects.module.css";
 
 export const metadata = {
   title: "Projects - Korbin S",
-  description: "Korbin Schulz's website's projects page",
+  description: "Korbin S projects page",
 };
 
 const Projects = () => {
@@ -13,7 +13,7 @@ const Projects = () => {
         <section className={style.projects_main_section}>
           <span className={style.main_header}>Projects</span>
           <span className={style.main_sub}>
-            You can also check out my GitHub{" "}
+            You can also check out my GitHub&nbsp;
             <a
               href="https://github.com/korbinschulz"
               target="_blank"

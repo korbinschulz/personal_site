@@ -2,7 +2,7 @@ import style from "../../styles/Experience.module.css";
 
 export const metadata = {
   title: "Experience - Korbin S",
-  description: "Korbin Schulz's experience page",
+  description: "Korbin S experience page",
 };
 
 const Experience = () => {
@@ -12,7 +12,7 @@ const Experience = () => {
         <section className={style.experience_main_section}>
           <span className={style.main_header}>Work Experience</span>
           <span className={style.main_sub}>
-            You can also learn download my resume{" "}
+            You can also learn download my resume&nbsp;
             <a
               href="/KorbinSchulz_Resume.pdf"
               target="_blank"
@@ -52,7 +52,8 @@ const Experience = () => {
           <ul className={style.experience_list}>
             <li className={style.experience_list_element}>
               Developed PowerShell scripts to sync resources from Azure, VMware,
-              and other database tables with Textron's ServiceNow's CMDB
+              and other database tables with Textron&apos;s ServiceNow&apos;s
+              CMDB
             </li>
             <li className={style.experience_list_element}>
               Automated interactions with the ServiceNow database to efficiently
@@ -61,7 +62,7 @@ const Experience = () => {
             </li>
             <li className={style.experience_list_element}>
               Created new forms and workflows within ServiceNow to reduce time
-              spent by other employees when they're interacting with the
+              spent by other employees when they&apos;re interacting with the
               database, resulting in a significant increase in both productivity
               and database health.
             </li>
