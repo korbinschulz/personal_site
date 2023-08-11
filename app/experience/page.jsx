@@ -34,8 +34,8 @@ const Experience = () => {
             <li className={style.experience_list_element}>
               Working with a team of developers to create a web interface for
               Lumina, which is a ticketing platform monitoring service designed
-              to help ticket "scalpers" acquire the best tickets to maximize
-              their profits
+              to help ticket &quot;scalpers&quot; acquire the best tickets to
+              maximize their profits
             </li>
             <li className={style.experience_list_element}>
               Developed and designed a comprehensive web interface using

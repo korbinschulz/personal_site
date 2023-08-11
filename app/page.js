@@ -11,28 +11,29 @@ export default function Home() {
     <main className={styles.outer}>
       <div className={styles.main_header}>
         <span>
-          <em>Hey, I'm Korbin!</em>
+          <em>Hey, I&apos;m Korbin!</em>
         </span>
         <span className={styles.main_subhead}>Student + Developer</span>
       </div>
 
       <div className={styles.main_body}>
         <p>
-          I'm a 20 year old student from Dallas, Texas. I am currently studying
-          Computer Science at the University of Texas at Dallas
+          I&apos;m a 20 year old student from Dallas, Texas. I am currently
+          studying Computer Science at the University of Texas at Dallas
         </p>
       </div>
 
       <div className={styles.main_body}>
-        I am interested in{" "}
-        <span className={styles.main_interest}>software engineering</span>{" "}
-        (mainly web & mobile),{" "}
-        <span className={styles.main_interest}>deep learning</span>,{" "}
-        <span className={styles.main_interest}>design</span> (UI & UX), and{" "}
+        I am interested in&nbsp;
+        <span className={styles.main_interest}>software engineering</span>&nbsp;
+        (mainly web & mobile),&nbsp;
+        <span className={styles.main_interest}>deep learning</span>,&nbsp;
+        <span className={styles.main_interest}>design</span> (UI & UX),
+        and&nbsp;
         <span className={styles.main_interest}>cybersecurity</span>. I desire to
         create unique, impactful products using my knowledge from these fields.
         I am also interested in
-        <span className={styles.main_interest}>music</span>,{" "}
+        <span className={styles.main_interest}>music</span>,&nbsp;
         <span className={styles.main_interest}>sports</span>, and
         <span className={styles.main_interest}>movies</span>!
       </div>

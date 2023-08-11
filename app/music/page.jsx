@@ -49,13 +49,14 @@ const Music = async () => {
         <section className={style.music_section}>
           <span className={style.main_header}>Music</span>
           <span className={style.main_sub}>
-            Check out the songs and artists that i've been listening to lately.
+            Check out the songs and artists that I&apos;ve been listening to
+            lately.
           </span>
         </section>
 
         <section className={style.music_section}>
           <span className={style.music_subheader}>
-            I'm currently listening to...
+            I&apos;m currently listening to...
           </span>
           <NowPlaying />
         </section>
@@ -65,6 +66,7 @@ const Music = async () => {
           <div className={style.music_content_container}>
             {artists.map((artist) => (
               <MusicCard
+                key={artist.url}
                 img={artist.image}
                 link={artist.url}
                 artist={artist.name}
@@ -78,6 +80,7 @@ const Music = async () => {
           <div className={style.music_content_container}>
             {songs.map((song) => (
               <MusicCard
+                key={song.link}
                 img={song.img}
                 link={song.link}
                 name={song.name}
