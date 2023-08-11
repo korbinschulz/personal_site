@@ -17,6 +17,11 @@
   text-align: center;
 }
 
+.music_subheader {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
 .music_image {
   height: 5rem;
   width: 5rem;

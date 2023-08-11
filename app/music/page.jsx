@@ -1,5 +1,6 @@
 import style from "../../styles/Music.module.css";
 import MusicCard from "@/components/MusicCard";
+import NowPlaying from "@/components/NowPlaying";
 export const metadata = {
   title: "Music - Korbin S",
   description: "Korbin Schulz's website's music page",
@@ -30,17 +31,6 @@ const Music = async () => {
     }
   }
 
-  async function getCurrentListening() {
-    try {
-      const response = await fetch(
-        "http:localhost:3000/api/spotify/now-playing"
-      );
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error fetching data", error);
-    }
-  }
   /*const [songs, setSongs] = useState();
   const [artists, setArtists] = useState();
   const [currentListening, setCurrentListening] = useState();
@@ -49,12 +39,10 @@ const Music = async () => {
 
   let artists = await getArtists();
   let songs = await getSongs();
-  let currentListening = await getCurrentListening();
   // }, []);
 
   console.log("ARTISTS HERE ", artists);
   console.log("SONGS HERE ", songs);
-  console.log("CURRENT HERE ", currentListening);
   return (
     <div className={style.music_outer}>
       <div className={style.music_inner}>
@@ -66,21 +54,10 @@ const Music = async () => {
         </section>
 
         <section className={style.music_section}>
-          {currentListening.title != null ? (
-            <>
-              <span className={style.music_subheader}>
-                I'm currently listening to...
-              </span>
-              <MusicCard
-                name={currentListening.title}
-                img={currentListening.albumImage}
-                artist={currentListening.artist}
-                link={currentListening.songUrl}
-              />
-            </>
-          ) : (
-            <></>
-          )}
+          <span className={style.music_subheader}>
+            I'm currently listening to...
+          </span>
+          <NowPlaying />
         </section>
 
         <section className={style.music_section}>
