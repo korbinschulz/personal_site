@@ -37,8 +37,8 @@ const Music = async () => {
 
   useEffect(() => {*/
 
-  let artists = await getArtists();
-  let songs = await getSongs();
+  let artists = await getTopArtist2();
+  let songs = await getTopTracks();
   // }, []);
 
   console.log("ARTISTS HERE ", artists);
@@ -64,7 +64,7 @@ const Music = async () => {
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Artists</span>
           <div className={style.music_content_container}>
-            {artists.map((artist) => (
+            {artists?.map((artist) => (
               <MusicCard
                 key={artist.url}
                 img={artist.image}
@@ -78,7 +78,7 @@ const Music = async () => {
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Songs</span>
           <div className={style.music_content_container}>
-            {songs.map((song) => (
+            {songs?.map((song) => (
               <MusicCard
                 key={song.link}
                 img={song.img}

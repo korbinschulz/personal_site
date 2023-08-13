@@ -12,7 +12,7 @@ const NowPlaying = () => {
 
   return (
     <>
-      {song.data ? (
+      {song?.data ? (
         <div>
           <a href={song.data.songUrl}>
             <div className={style.card_outer}>

@@ -21,7 +21,7 @@ export const GET = async (req, res) => {
     return response.data;
   };
 
-  const getTopArtists = async () => {
+  const getTopTracks = async () => {
     const { access_token } = await getToken();
     const response = await axios.get(
       "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=15&offset=5",
@@ -36,7 +36,7 @@ export const GET = async (req, res) => {
   };
 
   try {
-    const response = await getTopArtists();
+    const response = await getTopTracks();
 
     const data = response.items.map((track) => ({
       name: track.name,
