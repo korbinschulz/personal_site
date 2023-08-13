@@ -10,7 +10,7 @@ const Music = async () => {
   async function getArtists() {
     try {
       const response = await fetch(
-        "http:localhost:3000/api/spotify/top-artists"
+        "https://personal-site-eight-cyan.vercel.app/api/spotify/top-artists"
       );
       const data = await response.json();
       return data;
@@ -22,7 +22,7 @@ const Music = async () => {
   async function getSongs() {
     try {
       const response = await fetch(
-        "http:localhost:3000/api/spotify/top-tracks"
+        "https://personal-site-eight-cyan.vercel.app/api/spotify/top-tracks"
       );
       const data = await response.json();
       return data;
