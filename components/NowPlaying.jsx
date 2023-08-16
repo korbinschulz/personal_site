@@ -8,8 +8,6 @@ const NowPlaying = () => {
     fetch(url).then((res) => res.json())
   );
 
-  console.log("SONG HERE ", song.data);
-
   return (
     <>
       {song?.data ? (

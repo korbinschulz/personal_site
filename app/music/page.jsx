@@ -1,46 +1,17 @@
 import style from "../../styles/Music.module.css";
+import { getTopArtists, getTopTracks } from "../lib/spotify";
 import MusicCard from "@/components/MusicCard";
 import NowPlaying from "@/components/NowPlaying";
+
 export const metadata = {
   title: "Music - Korbin S",
   description: "Korbin S music page",
 };
 
-const Music = async () => {
-  async function getArtists() {
-    try {
-      const response = await fetch(
-        "https://korbinschulz.vercel.app/api/spotify/top-artists"
-      );
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error fetching data", error);
-    }
-  }
+export default async function Music() {
+  const artists = await getTopArtists();
+  const songs = await getTopTracks();
 
-  async function getSongs() {
-    try {
-      const response = await fetch(
-        "https://korbinschulz.vercel.app/api/spotify/top-tracks"
-      );
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error fetching data", error);
-    }
-  }
-
-  /*const [songs, setSongs] = useState();
-  const [artists, setArtists] = useState();
-  const [currentListening, setCurrentListening] = useState();
-
-  useEffect(() => {*/
-
-  // }, []);
-
-  console.log("ARTISTS HERE ", artists);
-  console.log("SONGS HERE ", songs);
   return (
     <div className={style.music_outer}>
       <div className={style.music_inner}>
@@ -62,7 +33,7 @@ const Music = async () => {
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Artists</span>
           <div className={style.music_content_container}>
-            {artists?.map((artist) => (
+            {artists.map((artist) => (
               <MusicCard
                 key={artist.url}
                 img={artist.image}
@@ -76,7 +47,7 @@ const Music = async () => {
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Songs</span>
           <div className={style.music_content_container}>
-            {songs?.map((song) => (
+            {songs.map((song) => (
               <MusicCard
                 key={song.link}
                 img={song.img}
@@ -90,6 +61,4 @@ const Music = async () => {
       </div>
     </div>
   );
-};
-
-export default Music;
+}
