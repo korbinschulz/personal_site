@@ -51,3 +51,14 @@
   max-width: 900px;
   gap: 2rem;
 }
+
+@media screen and (max-width: 500px) {
+  .projects_outer {
+    padding-left: 0;
+  }
+
+  .projects_inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -12,7 +12,7 @@ const Experience = () => {
         <section className={style.experience_main_section}>
           <span className={style.main_header}>Work Experience</span>
           <span className={style.main_sub}>
-            You can also learn download my resume&nbsp;
+            You can also download my resume&nbsp;
             <a
               href="/KorbinSchulz_Resume.pdf"
               target="_blank"
