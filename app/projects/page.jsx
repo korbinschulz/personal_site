@@ -3,7 +3,7 @@ import style from "@/styles/Projects.module.css";
 
 export const metadata = {
   title: "Projects - Korbin S",
-  description: "Korbin S projects page",
+  description: "Korbin Schulz's Website",
 };
 
 const Projects = () => {

@@ -49,4 +49,5 @@
   flex-direction: column;
   overflow-wrap: normal;
   max-width: 900px;
+  gap: 2rem;
 }

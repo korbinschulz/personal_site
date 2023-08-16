@@ -3,7 +3,7 @@ import styles from "../styles/Main.module.css";
 
 export const metadata = {
   title: "Home - Korbin S",
-  description: "Korbin Schulz's website's home page",
+  description: "Korbin Schulz's Website",
 };
 
 export default function Home() {

@@ -2,7 +2,7 @@ import style from "../../styles/Experience.module.css";
 
 export const metadata = {
   title: "Experience - Korbin S",
-  description: "Korbin S experience page",
+  description: "Korbin Schulz's Website",
 };
 
 const Experience = () => {

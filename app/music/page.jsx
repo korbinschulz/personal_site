@@ -5,7 +5,7 @@ import NowPlaying from "@/components/NowPlaying";
 
 export const metadata = {
   title: "Music - Korbin S",
-  description: "Korbin S music page",
+  description: "Korbin Schulz's Website",
 };
 
 export default async function Music() {
