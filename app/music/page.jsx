@@ -37,8 +37,6 @@ const Music = async () => {
 
   useEffect(() => {*/
 
-  let artists = await getTopArtist2();
-  let songs = await getTopTracks();
   // }, []);
 
   console.log("ARTISTS HERE ", artists);
