@@ -48,13 +48,17 @@
   margin-left: 5px;
 }
 
+.main_list {
+  margin-top: 10px;
+}
+
 .main_li {
   list-style-type: circle;
   margin-left: 25px;
   text-decoration: underline;
   text-underline-offset: 7px;
   font-family: serif;
-  margin-top: 3px;
+  margin-bottom: 10px;
 }
 
 .main_li:hover {
@@ -66,5 +70,20 @@
   .outer {
     padding-left: 2rem;
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .outer {
+    padding: 0;
+  }
+
+  .main_header {
+    padding: 0;
+  }
+
+  .main_body {
+    padding: 0;
+    font-size: 1.25rem;
   }
 }

@@ -69,3 +69,23 @@
     scale: 1.1;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .nav_outer {
+    padding-left: 0;
+  }
+
+  .nav_inner {
+    padding-left: 0;
+    padding-top: 0;
+    gap: 15px;
+    padding-right: 0;
+  }
+
+  .nav_link_icon {
+    font-size: 1.2rem;
+  }
+  .nav_link {
+    gap: 10px;
+  }
+}

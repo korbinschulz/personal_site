@@ -39,3 +39,18 @@
   color: rgb(255, 201, 211);
   cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+  .footer_outer {
+    padding-top: 2rem;
+  }
+
+  .footer_inner {
+    padding-left: 0;
+    font-size: 12px;
+  }
+
+  .footer_list {
+    font-size: 14px;
+  }
+}

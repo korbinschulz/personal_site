@@ -72,3 +72,13 @@
   margin-top: 5px;
   line-height: 1.3;
 }
+
+@media screen and (max-width: 500px) {
+  .experience_outer {
+    padding: 0;
+  }
+  .experience_inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
