@@ -10,7 +10,6 @@ import { PiMusicNotesLight } from "react-icons/pi";
 
 const Nav = () => {
   const pathname = usePathname();
-  console.log(`THE PATH IS ${pathname}`);
 
   return (
     <nav className={style.nav_outer}>
