@@ -56,13 +56,11 @@ export const GET = async (req, res) => {
       songUrl: response.item.external_urls.spotify,
     };
 
-    //console.log(response);
     return new Response(JSON.stringify(data), {
       status: 200,
     });
   } catch (error) {
     console.error("Error fetching data from Spotify API:", error);
-    //res.status(500).json({ error: "Internal Server Error" });
     return new Response("Internal Server Error", { status: 500 });
   }
 };
