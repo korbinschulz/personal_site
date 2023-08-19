@@ -1,29 +1,25 @@
-"use client";
 import style from "../styles/MusicCard.module.css";
 import Image from "next/image";
-import useSWR from "swr";
+import { getCurrentSong } from "@/app/lib/spotify";
 
-const NowPlaying = () => {
-  const song = useSWR("/api/spotify/now-playing", (url) =>
-    fetch(url).then((res) => res.json())
-  );
-
+const NowPlaying = async () => {
+  const song = await getCurrentSong();
   return (
     <>
-      {song?.data ? (
+      {song?.title ? (
         <div>
-          <a href={song.data.songUrl}>
+          <a href={song.songUrl}>
             <div className={style.card_outer}>
               <Image
                 alt={`Cover art for ${song.album} by ${song.artist}`}
                 className={style.music_image}
                 width={100}
                 height={100}
-                src={song.data.albumImage}
+                src={song.albumImage}
               />
               <div className={style.song_label}>
-                <span>{song.data.title}</span>
-                <span>{song.data.artist}</span>
+                <span>{song.title}</span>
+                <span>{song.artist}</span>
               </div>
             </div>
           </a>

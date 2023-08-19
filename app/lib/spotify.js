@@ -62,4 +62,32 @@ const getTopTracks = async () => {
   return data;
 };
 
-export { getTopArtists, getTopTracks };
+const getCurrentSong = async () => {
+  const { access_token } = await getToken();
+  const response = await fetch(
+    "https://api.spotify.com/v1/me/player/currently-playing",
+    {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+      cache: "no-cache",
+    }
+  );
+
+  if (response.isPlaying === false) return null;
+
+  const data = await response.json();
+
+  const currentSong = {
+    isPlaying: data.is_playing,
+    title: data.item.name,
+    album: data.item.album.name,
+    artist: data.item.album.artists.map((artist) => artist.name).join(", "),
+    albumImage: data.item.album.images[0].url,
+    songUrl: data.item.external_urls.spotify,
+  };
+
+  return currentSong;
+};
+
+export { getTopArtists, getTopTracks, getCurrentSong };
