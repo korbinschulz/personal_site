@@ -73,10 +73,14 @@ const getCurrentSong = async () => {
       cache: "no-cache",
     }
   );
-
-  if (response.isPlaying === false) return null;
-
+  console.log(`\n\n\nHERE IS RESPOSNE\n\n`, response);
+  if (response.body == undefined) {
+    console.log(`\n\n\nRESPONSE BODY UNDEFINED\n\n`);
+    return null;
+  }
   const data = await response.json();
+
+  if (data.isPlaying === false) return null;
 
   const currentSong = {
     isPlaying: data.is_playing,

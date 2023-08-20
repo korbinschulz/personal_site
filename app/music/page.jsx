@@ -1,5 +1,5 @@
 import style from "../../styles/Music.module.css";
-import { getTopArtists, getTopTracks } from "../lib/spotify";
+import { getTopArtists, getTopTracks, getCurrentSong } from "../lib/spotify";
 import MusicCard from "@/components/MusicCard";
 import NowPlaying from "@/components/NowPlaying";
 
@@ -11,6 +11,7 @@ export const metadata = {
 export default async function Music() {
   const artists = await getTopArtists();
   const songs = await getTopTracks();
+  const isOn = await getCurrentSong();
 
   return (
     <div className={style.music_outer}>
@@ -23,12 +24,13 @@ export default async function Music() {
           </span>
         </section>
 
-        <section className={style.music_section}>
-          <span className={style.music_subheader}>
-            I&apos;m currently listening to...
-          </span>
-          <NowPlaying />
-        </section>
+        {isOn?.title ? (
+          <section className={style.music_section}>
+            <NowPlaying />
+          </section>
+        ) : (
+          <></>
+        )}
 
         <section className={style.music_section}>
           <span className={style.music_subheader}>My Top Artists</span>

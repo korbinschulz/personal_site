@@ -7,8 +7,11 @@ const NowPlaying = async () => {
   return (
     <>
       {song?.title ? (
-        <div>
-          <a href={song.songUrl}>
+        <div className={style.current_outer}>
+          <span className={style.music_subheader}>
+            I&apos;m currently listening to...
+          </span>
+          <a className={style.bump} href={song.songUrl}>
             <div className={style.card_outer}>
               <Image
                 alt={`Cover art for ${song.album} by ${song.artist}`}

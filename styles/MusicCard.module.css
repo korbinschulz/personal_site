@@ -14,8 +14,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .music_image {
@@ -33,6 +31,17 @@
 .sub_label {
   font-size: 1rem;
   color: rgb(181, 181, 181);
+}
+
+.music_subheader {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.current_outer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 @media screen and (max-width: 1100px) {
