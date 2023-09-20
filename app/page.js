@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className={styles.main_body}>
         <p>
-          I&apos;m a 20 year old student from Dallas, Texas. I am currently
+          I&apos;m a 21 year old student from Dallas, Texas. I am currently
           studying Computer Science at the University of Texas at Dallas
         </p>
       </div>
