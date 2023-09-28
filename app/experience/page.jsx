@@ -14,7 +14,7 @@ const Experience = () => {
           <span className={style.main_sub}>
             You can also download my resume&nbsp;
             <a
-              href="/KorbinSchulz_Resume.pdf"
+              href="/Korbin_Schulz_Resume2.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
