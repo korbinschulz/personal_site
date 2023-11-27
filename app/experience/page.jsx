@@ -28,19 +28,21 @@ const Experience = () => {
         <section className={style.experience_subsection}>
           <span className={style.sub_header}>Lumina</span>
           <span className={style.supporting_label}>
-            Frontend Developer | Jun 2023 - Present
+            Frontend Developer | Jun 2023 - Oct 2023
           </span>
           <ul className={style.experience_list}>
             <li className={style.experience_list_element}>
-              Working with a team of developers to create a web interface for
-              Lumina, which is a ticketing platform monitoring service designed
-              to help ticket &quot;scalpers&quot; acquire the best tickets to
-              maximize their profits
+              Built a responsive, dynamic web app with React, Next.js, and CSS
+              modules, which helped decrease customer attrition by 10%
             </li>
             <li className={style.experience_list_element}>
-              Developed and designed a comprehensive web interface using
-              Next.JS, React, Figma, and CSS to create a responsive and visually
-              appealing user experience
+              Collaborated with backend developers to establish secure OAuth
+              workflows, implementing industry best practices to safeguard user
+              data and privacy
+            </li>
+            <li className={style.experience_list_element}>
+              Developed a RESTful API to help the client interact with various
+              microservices, reducing time spent fetching data by over 30%
             </li>
           </ul>
         </section>
