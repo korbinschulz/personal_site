@@ -26,6 +26,14 @@ const Projects = () => {
         </section>
         <section className={style.projects_subsection}>
           <ProjectCard
+            name="AI Virtual Streamer"
+            tech="Python, PyTorch, Flask, C#, Unity, ML-Agents"
+            bullet1="Created an AI powered virtual streamer that can play games and engage with viewers in real-time"
+            bullet2="Trained a neural network using PyTorch and ML-Agents to play games and interact with viewers"
+            bullet3="Designed and developed popular games like Flappy Bird and Donkey Kong using Unity and C#"
+          />
+
+          <ProjectCard
             name="Food Finder"
             tech="React, Typescript, CSS, Node.js, MySQL"
             bullet1="Developed a dynamic web application designed to help users discover exciting dining options"
