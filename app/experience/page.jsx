@@ -26,9 +26,9 @@ const Experience = () => {
         </section>
 
         <section className={style.experience_subsection}>
-          <span className={style.sub_header}>Lumina</span>
+          <span className={style.sub_header}>JPMorgan Chase</span>
           <span className={style.supporting_label}>
-            JPMorgan Chase | Jun 2024 - Aug 2024
+            Software Engineering Intern | Jun 2024 - Aug 2024
           </span>
           <ul className={style.experience_list}>
             <li className={style.experience_list_element}>
