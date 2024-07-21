@@ -26,19 +26,27 @@ const Projects = () => {
         </section>
         <section className={style.projects_subsection}>
           <ProjectCard
+            name="Resy Bot"
+            tech="Python, Docker, FastAPI"
+            bullet1="Developed a multithreaded bot to claim reservations on Resy, which are then resold for profit"
+            bullet2="Engineered solutions to bypass Resy's recaptcha and other anti-bot measures to automate the reservation process"
+            bullet3="Generates significant profit for customers by automatically claiming reservations"
+          />
+
+          <ProjectCard
+            name="Crypto Sniper"
+            tech="Python, Docker, FastAPI"
+            bullet1="Developed a scraper to get tweets from Twitter/X, bypassing their security and rate limits"
+            bullet2="Automatically snipes coins that are released by celebrities on X, giving customers early buy in opportunities"
+            bullet3="Generated clients tens of thousands of dollars in profits through the use of my sniper"
+          />
+
+          <ProjectCard
             name="AI Virtual Streamer"
             tech="Python, PyTorch, Flask, C#, Unity, ML-Agents"
             bullet1="Created an AI powered virtual streamer that can play games and engage with viewers in real-time"
             bullet2="Trained a neural network using PyTorch and ML-Agents to play games and interact with viewers"
             bullet3="Designed and developed popular games like Flappy Bird and Donkey Kong using Unity and C#"
-          />
-
-          <ProjectCard
-            name="Food Finder"
-            tech="React, Typescript, CSS, Node.js, MySQL"
-            bullet1="Developed a dynamic web application designed to help users discover exciting dining options"
-            bullet2="Utilized Yelp's API to display restaurants to users based off of their preferences and physical location"
-            bullet3="Implemented a Node.JS backend to handle API requests, and used a MySQL database to store users restaurant preferences and account data"
           />
 
           <ProjectCard

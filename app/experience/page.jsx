@@ -28,6 +28,27 @@ const Experience = () => {
         <section className={style.experience_subsection}>
           <span className={style.sub_header}>Lumina</span>
           <span className={style.supporting_label}>
+            JPMorgan Chase | Jun 2024 - Aug 2024
+          </span>
+          <ul className={style.experience_list}>
+            <li className={style.experience_list_element}>
+              Developing and migrating Spring Boot APIs to new repositories,
+              improving code organization and maintainability
+            </li>
+            <li className={style.experience_list_element}>
+              Configured Jules pipeline in Bitbucket for continuous deployments
+              to improve the development process
+            </li>
+            <li className={style.experience_list_element}>
+              Conducted end-to-end testing with JUnit, Pactflow, Cucumber, and
+              JMeter, increasing test coverage to over 80 percent
+            </li>
+          </ul>
+        </section>
+
+        <section className={style.experience_subsection}>
+          <span className={style.sub_header}>Lumina</span>
+          <span className={style.supporting_label}>
             Frontend Developer | Jun 2023 - Oct 2023
           </span>
           <ul className={style.experience_list}>
